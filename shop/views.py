@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404
-from haystack.query import SearchQuerySet
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 from django.db.models import Q
@@ -28,10 +27,7 @@ def product_detail(request, id, slug):
         'cart_product_form': cart_product_form,
     }) 
 
-def search(request):
-    query = request.GET.get('q')
-    results = SearchQuerySet().filter(content=query)
-    return render(request, 'shop/product/search.html', {'results': results})
+
 
 def filter_by_price(request):
     min_price = request.GET.get('min_price')
