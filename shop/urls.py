@@ -5,7 +5,6 @@ from .views import search
 app_name = 'shop'
 
 urlpatterns = [
-    path('', views.index, name='index'),
     path('search/', search, name='search'),
     path('', views.product_list, name='product_list'),
     path('<slug:category_slug>/', views.product_list, name='product_list_by_category'),
