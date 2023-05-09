@@ -1,9 +1,13 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu);
 
-
-
 .shop_name {margin-top: 30px;
             margin-left: 120px;}
+
+.op{color:black;
+font-size: 2em;
+font-style: italic;
+font-weight: lighter;
+margin-left: 500px;}
 
 .contact {background:#ececec;
     color:#444;
@@ -162,7 +166,7 @@ ul.errorlist {
     float:left;
     color:#333;
     font-size:22px;
-    margin-right:10%;
+    margin-right:5%;
 }
 
 #subheader .cart {
@@ -365,36 +369,44 @@ form div.field {
     border-radius:4px;
 }
 
-.kn form {
+.kn {
     display: flex;
-    justify-content: center;
+    margin-left: 0px;
+  }
+  
+  .kn form {
+    display: flex;
     align-items: center;
-    width: 300px;
-    height: 50px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px;
   }
   
   .kn input[type="text"] {
-    width: 300px;
-    height: 30px;
-    font-size: 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    padding: 4px;
+    flex: 1;
   }
   
   .kn button[type="submit"] {
-    height: 50px;
-    font-size: 16px;
-    font-weight: bold;
     background-color: #cfcdca;
-    color: #fff;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
- 
-  .product-search .item {
+  
+  .kn button[type="submit"]:hover {
+    background-color: #cfcdca;
+  }
+  
+ .product-search .item {
     width:28%;
     height:270px;
     padding:5px 5px 5px 5px;
@@ -403,10 +415,10 @@ form div.field {
     line-height:1.2;
     margin: 20px ;
     border-style: groove;
-    border-width: 5px;}
+    border-width: 1px;}
 
     .product-search .item img {
         width:65%;
         height:200px;
-        margin-bottom:8px;
+        margin-bottom:1px;
     }

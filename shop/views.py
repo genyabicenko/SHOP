@@ -28,21 +28,11 @@ def product_detail(request, id, slug):
     }) 
 
 
-
 def filter_by_price(request):
     min_price = request.GET.get('min_price')
     max_price = request.GET.get('max_price')
     products = Product.objects.filter(price__range=(min_price, max_price))
     return render(request, 'shop/product/list.html', {'products': products})
-
-def index(request):
-     return render(request, 'shop/index.html')
- 
-def submit(request):
-    a = request.POST(['initial'])
-    return render(request, 'shop/index.html', {
-        'error_message': "returned"
-    })
 
 def search(request):
     query = request.GET.get('q')
