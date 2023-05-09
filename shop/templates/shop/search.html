@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <h1>Результаты поиска</h1>
-    <p>Результаты по запросу "{{ query }}":</p>
+    <h1>Пошук</h1>
+    <p>Результати пошуку "{{ query }}":</p>
     {% if results %}
         <ul>
             <div class="product-search">
@@ -23,6 +23,6 @@
             <div> 
         </ul>
     {% else %}
-        <p>Нет результатов для вашего запроса.</p>
+        <p>Нічого не знайдено</p>
     {% endif %}
 {% endblock content %}

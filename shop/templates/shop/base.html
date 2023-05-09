@@ -14,12 +14,6 @@
         <a href="/" class="logo"> <img align="left" src="https://img.freepik.com/premium-vector/candle-with-flowers-hand-drawn-vector-burning-candle-sketch-isolated-white-background_439591-702.jpg" widht="119" height="110"><h1 class="shop_name">AromaDay</h1></a> 
     </div>
     <div id="subheader">
-        <div class="d1">
-            <form method="get" action="{% url 'shop:search' %}">
-                <input  type="text" name="q" placeholder="Введіть запит...">
-                <button type="submit"></button>          
-            </form>
-        </div>
         <div class="cart">
             {% with total_items=cart|length %}
                 {% if total_items > 0 %}
@@ -31,6 +25,12 @@
                     Ваша корзина порожня
                 {% endif %}
             {% endwith %}
+        </div>
+        <div class="kn">
+            <form method="get" action="{% url 'shop:search' %}">
+                <input  type="text" name="q" placeholder="Введіть запит...">
+                <button type="submit">Пошук</button>          
+            </form>
         </div>
     </div>
     <div id="content">
